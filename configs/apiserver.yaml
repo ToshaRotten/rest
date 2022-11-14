@@ -1,3 +1,6 @@
 host: "localhost"
 port: ":8080"
 loglevel: "debug"
+
+store:
+  database_url: "host=localhost dbname=rest sslmode=disable"

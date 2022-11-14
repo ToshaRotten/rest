@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestAPIServer_HandleSmth(t *testing.T) {
+func TestAPIServer_HandleHome(t *testing.T) {
 	s := New(NewConfig())
 	rec := httptest.NewRecorder()
 	req, _ := http.NewRequest(http.MethodGet, "/home", nil)

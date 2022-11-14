@@ -3,7 +3,8 @@ package main
 import (
 	"flag"
 	"log"
-	"rest/server/apiserver"
+
+	"github.com/ToshaRotten/rest/apiserver"
 )
 
 var (

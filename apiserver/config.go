@@ -3,6 +3,7 @@ package apiserver
 import (
 	"io/ioutil"
 
+	"github.com/ToshaRotten/rest/store"
 	"gopkg.in/yaml.v3"
 )
 
@@ -11,6 +12,7 @@ type Config struct {
 	Host     string `yaml:"host"`
 	Port     string `yaml:"port"`
 	LogLevel string `yaml:"loglevel"`
+	Store    *store.Config
 }
 
 //New config - create a new config with parameters: { host:"localhost" port:":8080" }
@@ -19,6 +21,7 @@ func NewConfig() *Config {
 		Host:     "localhost",
 		Port:     ":8080",
 		LogLevel: "debug",
+		Store:    store.NewConfig(),
 	}
 }
 
