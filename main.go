@@ -2,9 +2,6 @@ package main
 
 import (
 	"flag"
-	"log"
-
-	"github.com/ToshaRotten/rest/apiserver"
 )
 
 var (
@@ -12,19 +9,9 @@ var (
 )
 
 func init() {
-	flag.StringVar(&configPath, "config-path", "configs/apiserver.yaml", "path to config file")
+	flag.StringVar(&configPath, "configurator-path", "configs/apiserver.yaml", "path to configurator file")
 }
 
 func main() {
 	flag.Parse()
-	config, err := apiserver.TakeConfigFile(configPath)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	s := apiserver.New(config)
-	err = s.Start()
-	if err != nil {
-		log.Fatal(err)
-	}
 }

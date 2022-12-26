@@ -1,0 +1,9 @@
+Config:
+  ServerConfig:
+    host: "localhost"
+    port: ":8080"
+    loglevel: "debug"
+  StoreConfig:
+    host: "localhost"
+    dbname: "users"
+    sslmode: "disable"
